@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Range | Systems & AI Infrastructure</title>
-    <meta name="description" content="Identity, automation, and workplace systems that hold up under pressure. AI consulting for Legal & Maritime industries in New Orleans.">
-    
+    <title>RYAN RANGE | SYSTEMS AUTHORITY</title>
+    <meta name="description" content="Identity, automation, and workplace systems. AI consulting for Legal & Maritime. New Orleans.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
-            --bg: #0f1115;       /* Deep industrial charcoal */
-            --bg-alt: #16191f;   /* Slightly lighter section bg */
-            --text: #e8e9ec;     /* Off-white for readability */
-            --muted: #8b929e;    /* Muted grey for metadata */
-            --accent: #d4d4d8;   /* Bright steel for highlights */
-            --border: rgba(255, 255, 255, 0.08);
-            --grid: rgba(255, 255, 255, 0.03);
+            /* The Final Palette: Void & Bone */
+            --bg: #050505;
+            --bg-alt: #0a0a0a;
+            
+            --text: #fdfbf7;     /* Bone White */
+            --muted: #888888;    /* Concrete Grey */
+            --accent: #d4d4d8;   /* Steel */
+            
+            --border: rgba(253, 251, 247, 0.1);
+            --grid: rgba(253, 251, 247, 0.03);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; font-size: 16px; }
 
         body {
             font-family: 'Space Grotesk', sans-serif;
@@ -38,132 +34,141 @@
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
-            /* Subtle engineering grid background */
-            background-image: 
+            /* subtle engineering grid */
+            background-image:
                 linear-gradient(var(--grid) 1px, transparent 1px),
                 linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-size: 50px 50px;
         }
 
-        /* --- UTILITIES --- */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: 1px solid var(--border);
-            transition: all 0.2s ease;
-        }
-
-        a:hover {
-            border-bottom-color: var(--text);
-            color: #fff;
-        }
-
-        /* --- TYPOGRAPHY --- */
+        /* Typography */
         h1, h2, h3 {
             font-family: 'DM Serif Display', serif;
             font-weight: 400;
             line-height: 1.1;
+            letter-spacing: -0.02em;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        a:hover { border-bottom-color: var(--text); }
+
         .label {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
             color: var(--muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: block;
         }
 
-        /* --- HERO --- */
+        /* Hero */
         header {
-            padding: 6rem 0 4rem;
+            padding: 8rem 0 5rem;
             border-bottom: 1px solid var(--border);
         }
 
         .hero-title {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            margin-bottom: 2rem;
             color: var(--text);
-            margin-bottom: 1.5rem;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
+        .hero-statement {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-family: 'DM Serif Display', serif;
+            line-height: 1.35;
+            margin-bottom: 1.5rem;
+            max-width: 750px;
+        }
+
+        .hero-sub {
             color: var(--muted);
             max-width: 600px;
-            font-family: 'DM Serif Display', serif;
             margin-bottom: 2rem;
+            font-size: 1rem;
         }
 
         .status-badge {
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.05);
+            padding: 0.6rem 1.2rem;
             border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: var(--accent);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text);
         }
 
         .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #4ade80; /* Green "active" dot */
+            width: 6px;
+            height: 6px;
+            background-color: #4ade80; /* Green signal */
             border-radius: 50%;
-            margin-right: 10px;
-            box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+            margin-right: 12px;
+            box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
         }
 
-        /* --- NO BS GRID --- */
-        .manifesto {
-            padding: 5rem 0;
+        /* Services Grid */
+        .services {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .services-header {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3rem;
+            gap: 0;
+            border-top: 1px solid var(--border);
         }
 
-        @media(min-width: 768px) {
-            .manifesto {
-                grid-template-columns: 1fr 1fr;
-            }
+        @media(min-width: 700px) {
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .service-item:nth-child(odd) { border-right: 1px solid var(--border); }
         }
 
-        .list-header {
-            font-size: 1.2rem;
-            color: var(--text);
-            margin-bottom: 1.5rem;
+        .service-item {
+            padding: 3rem 2rem;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 0.5rem;
+        }
+        
+        /* Remove extra padding on mobile to keep it tight */
+        @media(max-width: 700px) {
+            .service-item { padding: 2rem 0; }
         }
 
-        .check-list li {
-            list-style: none;
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
+        .service-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .service-desc {
             color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .check-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        /* --- WORKSHOP BANNER --- */
+        /* Workshop Banner */
         .workshop {
             background: var(--bg-alt);
-            border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
 
         .workshop-grid {
@@ -178,149 +183,169 @@
             }
         }
 
+        .workshop-tagline {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            margin: 0.5rem 0 1rem;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
         .btn {
             display: inline-flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            padding: 1rem;
+            padding: 1.2rem;
             background: var(--text);
             color: var(--bg);
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
+            font-size: 0.8rem;
             border: none;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: opacity 0.2s;
         }
+        .btn:hover { opacity: 0.9; border-bottom: none; }
 
-        .btn:hover {
-            background: #fff;
-            border-bottom: none; /* Override link style */
-        }
-
-        /* --- CONTACT --- */
-        .contact {
-            padding: 5rem 0;
-        }
-
+        /* Contact */
+        .contact { padding: 6rem 0; }
+        
+        .contact-header { font-size: 2rem; margin-bottom: 0.5rem; }
+        .contact-sub { color: var(--muted); margin-bottom: 3rem; }
+        
         .contact-methods {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 3rem;
         }
 
         .contact-item span {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--muted);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.2em;
             margin-bottom: 0.5rem;
         }
 
         .contact-item a {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-family: 'DM Serif Display', serif;
-            border-bottom: 1px solid var(--border);
+            color: var(--text);
         }
 
         footer {
-            padding: 3rem 0;
-            font-size: 0.8rem;
+            padding: 4rem 0;
+            font-size: 0.75rem;
             color: var(--muted);
             border-top: 1px solid var(--border);
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
         }
-
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <span class="label">New Orleans • LA</span>
-            <h1 class="hero-title">Ryan Range</h1>
-            <p class="hero-subtitle">
-                I bridge the gap between legacy IT infrastructure and modern AI implementation. 
-                10+ years operating systems that cannot afford to fail.
-            </p>
-            
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Now pivoting to AI Consulting for Legal & Maritime
+<header>
+    <div class="container">
+        <span class="label">New Orleans • LA</span>
+
+        <h1 class="hero-title">Ryan Range</h1>
+
+        <p class="hero-statement">
+            I make systems work — and teams actually use them.
+        </p>
+
+        <p class="hero-sub">
+            I've kept infrastructure running where downtime costs six figures.
+            Now I do the same for legal and maritime.
+        </p>
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Capacity: Open
+        </div>
+    </div>
+</header>
+
+<section class="services">
+    <div class="container">
+        <h2 class="services-header">What I Run</h2>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <h3 class="service-title">Identity & Access</h3>
+                <p class="service-desc">
+                    Entra ID, Intune, zero-trust. Security that holds tight without making your employees hate their jobs.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3 class="service-title">AI Integration</h3>
+                <p class="service-desc">
+                    Production AI workflows. No demos. No decks. Ownership end-to-end. I build tools you can use Monday morning.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3 class="service-title">Infrastructure</h3>
+                <p class="service-desc">
+                    Built to fail gracefully. Monitored. Documented. Handed off clean.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3 class="service-title">The Bridge</h3>
+                <p class="service-desc">
+                    I translate between "Technical" and "Business." No fog. No jargon. Decisions get made.
+                </p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section class="container">
-        <div class="manifesto">
-            <div class="block">
-                <h3 class="list-header">What I Run</h3>
-                <ul class="check-list">
-                    <li>Identity & access that actually holds up</li>
-                    <li>Endpoint automation (Intune/Entra)</li>
-                    <li>AI used for Ops, not theater</li>
-                    <li>Infrastructure built for real failure modes</li>
-                </ul>
+<section class="workshop">
+    <div class="container">
+        <div class="workshop-grid">
+            <div>
+                <span class="label">Jan 6, 2026</span>
+                <h2>AI Crash Course</h2>
+                <p class="workshop-tagline">"AI won't replace you. Someone using AI will."</p>
+                <p class="hero-sub" style="margin-bottom: 0;">
+                    90 minutes. Non-technical. I will show you how to use current AI tools to do your actual job faster.
+                </p>
             </div>
-
-            <div class="block">
-                <h3 class="list-header" style="color: #999;">What I Avoid</h3>
-                <ul class="check-list">
-                    <li>Consulting decks without ownership</li>
-                    <li>Tools without accountability</li>
-                    <li>"Best practices" divorced from reality</li>
-                    <li>Tech-bro jargon</li>
-                </ul>
+            <div>
+                <a href="mailto:ryan@range.it.com?subject=AI%20Course%20Seat" class="btn" style="border-bottom:none">Secure Seat</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="workshop">
-        <div class="container">
-            <div class="workshop-grid">
-                <div>
-                    <span class="label">Upcoming • Jan 6, 2026</span>
-                    <h2>AI Crash Course</h2>
-                    <p style="color: var(--muted); margin-top: 1rem; max-width: 500px;">
-                        A 90-minute fundamental breakdown for non-technical professionals. 
-                        No fluff. Just the tools you can use Monday morning to do your actual job faster.
-                    </p>
-                </div>
-                <div>
-                    <a href="mailto:hi@ryanrange.click?subject=AI Class Inquiry" class="btn" style="border-bottom:none">Request Invite</a>
-                </div>
-            </div>
+<section class="contact container">
+    <h2 class="contact-header">Direct Line.</h2>
+    <p class="contact-sub">No gatekeepers.</p>
+    
+    <div class="contact-methods">
+        <div class="contact-item">
+            <span>Call / Text</span>
+            <a href="tel:15043458049">(504) 345-8049</a>
         </div>
-    </section>
+        <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:ryan@range.it.com">ryan@range.it.com</a>
+        </div>
+    </div>
+</section>
 
-    <section class="contact container">
-        <span class="label">Direct Line</span>
-        <h2>No gatekeepers.</h2>
-        
-        <div class="contact-methods">
-            <div class="contact-item">
-                <span>Phone / Text</span>
-                <a href="tel:15043458049">(504) 345-8049</a>
-            </div>
-            <div class="contact-item">
-                <span>Email</span>
-                <a href="mailto:hi@ryanrange.click">hi@ryanrange.click</a>
-            </div>
-            <div class="contact-item">
-                <span>Network</span>
-                <a href="https://linkedin.com/in/ryanrange">LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            &copy; 2026 Ryan Range. Built in New Orleans.
-        </div>
-    </footer>
+<footer>
+    <div class="container">
+        &copy; 2026 Ryan Range
+    </div>
+</footer>
 
 </body>
 </html>
