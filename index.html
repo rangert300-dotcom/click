@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Range | Systems & AI Infrastructure</title>
+    <meta name="description" content="Identity, automation, and workplace systems that hold up under pressure. AI consulting for Legal & Maritime industries in New Orleans.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0f1115;       /* Deep industrial charcoal */
+            --bg-alt: #16191f;   /* Slightly lighter section bg */
+            --text: #e8e9ec;     /* Off-white for readability */
+            --muted: #8b929e;    /* Muted grey for metadata */
+            --accent: #d4d4d8;   /* Bright steel for highlights */
+            --border: rgba(255, 255, 255, 0.08);
+            --grid: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            /* Subtle engineering grid background */
+            background-image: 
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--text);
+            color: #fff;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* --- HERO --- */
+        header {
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--muted);
+            max-width: 600px;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4ade80; /* Green "active" dot */
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+        }
+
+        /* --- NO BS GRID --- */
+        .manifesto {
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media(min-width: 768px) {
+            .manifesto {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .list-header {
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .check-list li {
+            list-style: none;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--muted);
+        }
+
+        .check-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* --- WORKSHOP BANNER --- */
+        .workshop {
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 0;
+        }
+
+        .workshop-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media(min-width: 768px) {
+            .workshop-grid {
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            background: var(--text);
+            color: var(--bg);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            border-bottom: none; /* Override link style */
+        }
+
+        /* --- CONTACT --- */
+        .contact {
+            padding: 5rem 0;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            font-size: 1.2rem;
+            font-family: 'DM Serif Display', serif;
+            border-bottom: 1px solid var(--border);
+        }
+
+        footer {
+            padding: 3rem 0;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <span class="label">New Orleans • LA</span>
+            <h1 class="hero-title">Ryan Range</h1>
+            <p class="hero-subtitle">
+                I bridge the gap between legacy IT infrastructure and modern AI implementation. 
+                10+ years operating systems that cannot afford to fail.
+            </p>
+            
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Now pivoting to AI Consulting for Legal & Maritime
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="manifesto">
+            <div class="block">
+                <h3 class="list-header">What I Run</h3>
+                <ul class="check-list">
+                    <li>Identity & access that actually holds up</li>
+                    <li>Endpoint automation (Intune/Entra)</li>
+                    <li>AI used for Ops, not theater</li>
+                    <li>Infrastructure built for real failure modes</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3 class="list-header" style="color: #999;">What I Avoid</h3>
+                <ul class="check-list">
+                    <li>Consulting decks without ownership</li>
+                    <li>Tools without accountability</li>
+                    <li>"Best practices" divorced from reality</li>
+                    <li>Tech-bro jargon</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="workshop">
+        <div class="container">
+            <div class="workshop-grid">
+                <div>
+                    <span class="label">Upcoming • Jan 6, 2026</span>
+                    <h2>AI Crash Course</h2>
+                    <p style="color: var(--muted); margin-top: 1rem; max-width: 500px;">
+                        A 90-minute fundamental breakdown for non-technical professionals. 
+                        No fluff. Just the tools you can use Monday morning to do your actual job faster.
+                    </p>
+                </div>
+                <div>
+                    <a href="mailto:hi@ryanrange.click?subject=AI Class Inquiry" class="btn" style="border-bottom:none">Request Invite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact container">
+        <span class="label">Direct Line</span>
+        <h2>No gatekeepers.</h2>
+        
+        <div class="contact-methods">
+            <div class="contact-item">
+                <span>Phone / Text</span>
+                <a href="tel:15043458049">(504) 345-8049</a>
+            </div>
+            <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:hi@ryanrange.click">hi@ryanrange.click</a>
+            </div>
+            <div class="contact-item">
+                <span>Network</span>
+                <a href="https://linkedin.com/in/ryanrange">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Ryan Range. Built in New Orleans.
+        </div>
+    </footer>
+
+</body>
+</html>
