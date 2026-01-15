@@ -18,14 +18,19 @@
       "name": "Ryan Range",
       "jobTitle": "IT Infrastructure Engineer & AI Consultant",
       "url": "https://ryanrange.click",
-      "sameAs": [ "https://ryanrange.click/linkedin" ],
+      "image": "https://ryanrange.click/avatar.jpg",
+      "sameAs": [
+        "https://ryanrange.click/linkedin",
+        "https://www.youtube.com/@ryantrange"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "New Orleans",
         "addressRegion": "LA",
         "addressCountry": "US"
       },
-      "description": "Systems authority specializing in Entra ID, Intune, and AI implementation for Legal and Maritime sectors."
+      "description": "Enterprise Systems Authority. Specializing in Microsoft Entra ID, Intune, and AI Implementation. Not a videographer.",
+      "knowsAbout": ["IT Infrastructure", "Microsoft 365", "Artificial Intelligence", "Maritime Systems", "Legal Tech"]
     }
     </script>
 
@@ -40,8 +45,10 @@
             --border: rgba(253, 251, 247, 0.1);
             --grid: rgba(253, 251, 247, 0.03);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
+
         body {
             font-family: 'Space Grotesk', sans-serif;
             background-color: var(--bg);
@@ -51,19 +58,49 @@
             background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
             background-size: 50px 50px;
         }
+
         .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Typography */
         h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; }
         a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.2s; }
         a:hover { border-bottom-color: var(--text); }
         .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--muted); margin-bottom: 1.5rem; display: block; }
         
+        /* Tech Badges (MOD 3) */
+        code {
+            font-family: 'Space Grotesk', sans-serif;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
         /* Hero */
         header { padding: 8rem 0 5rem; border-bottom: 1px solid var(--border); }
         .hero-title { font-size: clamp(3.5rem, 10vw, 6rem); margin-bottom: 2rem; color: var(--text); }
         .hero-statement { font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: 'DM Serif Display', serif; line-height: 1.35; margin-bottom: 1.5rem; max-width: 750px; }
         .hero-sub { color: var(--muted); max-width: 600px; margin-bottom: 2rem; font-size: 1rem; }
+        
         .status-badge { display: inline-flex; align-items: center; padding: 0.6rem 1.2rem; border: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
-        .status-dot { width: 6px; height: 6px; background-color: #4ade80; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(74, 222, 128, 0.4); }
+        
+        /* Pulse Animation (MOD 2) */
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #4ade80;
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+        }
 
         /* Services */
         .services { padding: 6rem 0; border-bottom: 1px solid var(--border); }
@@ -107,17 +144,33 @@
     </div>
 </header>
 
+<div style="border-bottom: 1px solid var(--border); padding: 1.5rem 0; background: var(--bg-alt);">
+    <div class="container" style="display: flex; gap: 2rem; overflow-x: auto; white-space: nowrap; font-family: 'DM Serif Display', serif; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; scrollbar-width: none;">
+        <span>Maritime Operations</span>
+        <span>•</span>
+        <span>Legal Infrastructure</span>
+        <span>•</span>
+        <span>Federal Compliance</span>
+        <span>•</span>
+        <span>Enterprise AI</span>
+    </div>
+</div>
+
 <section class="services">
     <div class="container">
         <h2 class="services-header">What I Run</h2>
         <div class="services-grid">
             <div class="service-item">
                 <h3 class="service-title">Identity & Access</h3>
-                <p class="service-desc">Entra ID, Intune, zero-trust. Security that holds tight without making your employees hate their jobs.</p>
+                <p class="service-desc">
+                    <code>Entra ID</code> <code>Intune</code> <code>Zero-Trust</code>. Security that holds tight without making your employees hate their jobs.
+                </p>
             </div>
             <div class="service-item">
                 <h3 class="service-title">AI Integration</h3>
-                <p class="service-desc">Production AI workflows. No demos. No decks. Ownership end-to-end. I build tools you can use Monday morning.</p>
+                <p class="service-desc">
+                    <code>LLM Ops</code> <code>Automation</code>. Production workflows. No demos. No decks. Tools you can use Monday morning.
+                </p>
             </div>
             <div class="service-item">
                 <h3 class="service-title">Infrastructure</h3>
@@ -162,7 +215,7 @@
     </div>
 </section>
 
-<footer><div class="container">&copy; 2025 Ryan Range</div></footer>
+<footer><div class="container">&copy; 2026 Ryan Range</div></footer>
 
 </body>
 </html>
