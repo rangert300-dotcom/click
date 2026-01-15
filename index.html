@@ -7,6 +7,17 @@
     <meta name="description" content="Identity, automation, and workplace systems. AI consulting for Legal & Maritime. New Orleans.">
     <link rel="canonical" href="https://ryanrange.click/">
 
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ryan Range | Systems Authority">
+    <meta property="og:description" content="Identity, automation, and workplace systems. AI consulting for Legal & Maritime. New Orleans.">
+    <meta property="og:url" content="https://ryanrange.click/">
+    <meta property="og:image" content="https://ryanrange.click/avatar.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ryan Range | Systems Authority">
+    <meta name="twitter:description" content="Identity, automation, and workplace systems.">
+    <meta name="twitter:image" content="https://ryanrange.click/avatar.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
@@ -67,7 +78,7 @@
         a:hover { border-bottom-color: var(--text); }
         .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--muted); margin-bottom: 1.5rem; display: block; }
         
-        /* Tech Badges (MOD 3) */
+        /* Tech Badges */
         code {
             font-family: 'Space Grotesk', sans-serif;
             background: rgba(255, 255, 255, 0.1);
@@ -86,7 +97,7 @@
         
         .status-badge { display: inline-flex; align-items: center; padding: 0.6rem 1.2rem; border: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
         
-        /* Pulse Animation (MOD 2) */
+        /* Pulse Animation (With Reduced Motion Guardrail) */
         .status-dot {
             width: 6px;
             height: 6px;
@@ -95,6 +106,9 @@
             margin-right: 12px;
             box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
             animation: pulse 2s infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .status-dot { animation: none; }
         }
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
@@ -134,88 +148,90 @@
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <span class="label">New Orleans • LA</span>
-        <h1 class="hero-title">Ryan Range</h1>
-        <p class="hero-statement">I make systems work — and teams actually use them.</p>
-        <p class="hero-sub">I've kept infrastructure running where downtime costs six figures. Now I do the same for legal and maritime.</p>
-        <div class="status-badge"><span class="status-dot"></span>Capacity: Open</div>
-    </div>
-</header>
+<main>
+    <header>
+        <div class="container">
+            <span class="label">New Orleans • LA</span>
+            <h1 class="hero-title">Ryan Range</h1>
+            <p class="hero-statement">I make systems work — and teams actually use them.</p>
+            <p class="hero-sub">I've kept infrastructure running where downtime costs six figures. Now I do the same for legal and maritime.</p>
+            <div class="status-badge"><span class="status-dot" aria-hidden="true"></span>Capacity: Open</div>
+        </div>
+    </header>
 
-<div style="border-bottom: 1px solid var(--border); padding: 1.5rem 0; background: var(--bg-alt);">
-    <div class="container" style="display: flex; gap: 2rem; overflow-x: auto; white-space: nowrap; font-family: 'DM Serif Display', serif; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; scrollbar-width: none;">
-        <span>Maritime Operations</span>
-        <span>•</span>
-        <span>Legal Infrastructure</span>
-        <span>•</span>
-        <span>Federal Compliance</span>
-        <span>•</span>
-        <span>Enterprise AI</span>
-    </div>
-</div>
-
-<section class="services">
-    <div class="container">
-        <h2 class="services-header">What I Run</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <h3 class="service-title">Identity & Access</h3>
-                <p class="service-desc">
-                    <code>Entra ID</code> <code>Intune</code> <code>Zero-Trust</code>. Security that holds tight without making your employees hate their jobs.
-                </p>
-            </div>
-            <div class="service-item">
-                <h3 class="service-title">AI Integration</h3>
-                <p class="service-desc">
-                    <code>LLM Ops</code> <code>Automation</code>. Production workflows. No demos. No decks. Tools you can use Monday morning.
-                </p>
-            </div>
-            <div class="service-item">
-                <h3 class="service-title">Infrastructure</h3>
-                <p class="service-desc">Built to fail gracefully. Monitored. Documented. Handed off clean. No black boxes.</p>
-            </div>
-            <div class="service-item">
-                <h3 class="service-title">The Bridge</h3>
-                <p class="service-desc">I translate between "Technical" and "Business." No fog. No jargon. Decisions get made.</p>
-            </div>
+    <div style="border-bottom: 1px solid var(--border); padding: 1.5rem 0; background: var(--bg-alt);">
+        <div class="container" style="display: flex; gap: 2rem; overflow-x: auto; white-space: nowrap; font-family: 'DM Serif Display', serif; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; scrollbar-width: none;">
+            <span>Maritime Operations</span>
+            <span>•</span>
+            <span>Legal Infrastructure</span>
+            <span>•</span>
+            <span>Federal Compliance</span>
+            <span>•</span>
+            <span>Enterprise AI</span>
         </div>
     </div>
-</section>
 
-<section class="workshop">
-    <div class="container">
-        <div class="workshop-grid">
-            <div>
-                <span class="label">Q1 2026</span>
-                <h2>AI Crash Course</h2>
-                <p class="workshop-tagline">"AI won't replace you. Someone using AI will."</p>
-                <p class="hero-sub" style="margin-bottom: 0;">90 minutes. Non-technical. I will show you how to use current AI tools to do your actual job faster.</p>
+    <section class="services">
+        <div class="container">
+            <h2 class="services-header">What I Run</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3 class="service-title">Identity & Access</h3>
+                    <p class="service-desc">
+                        <code>Entra ID</code> <code>Intune</code> <code>Zero-Trust</code>. Security that holds tight without making your employees hate their jobs.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-title">AI Integration</h3>
+                    <p class="service-desc">
+                        <code>LLM Ops</code> <code>Automation</code>. Production workflows. No demos. No decks. Tools you can use Monday morning.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-title">Infrastructure</h3>
+                    <p class="service-desc">Built to fail gracefully. Monitored. Documented. Handed off clean. No black boxes.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-title">The Bridge</h3>
+                    <p class="service-desc">I translate between "Technical" and "Business." No fog. No jargon. Decisions get made.</p>
+                </div>
             </div>
-            <div>
-                <a href="https://ryanrange.click/ai" class="btn" style="border-bottom:none">Secure Seat</a>
+        </div>
+    </section>
+
+    <section class="workshop">
+        <div class="container">
+            <div class="workshop-grid">
+                <div>
+                    <span class="label">Q1 2026</span>
+                    <h2>AI Crash Course</h2>
+                    <p class="workshop-tagline">"AI won't replace you. Someone using AI will."</p>
+                    <p class="hero-sub" style="margin-bottom: 0;">90 minutes. Non-technical. I will show you how to use current AI tools to do your actual job faster.</p>
+                </div>
+                <div>
+                    <a href="https://ryanrange.click/ai" class="btn" style="border-bottom:none">Secure Seat</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="contact container">
-    <h2 class="contact-header">Direct Line.</h2>
-    <p class="contact-sub">No gatekeepers.</p>
-    <div class="contact-methods">
-        <div class="contact-item">
-            <span>Call / Text</span>
-            <a href="tel:15043458049">(504) 345-8049</a>
+    <section class="contact container">
+        <h2 class="contact-header">Direct Line.</h2>
+        <p class="contact-sub">No gatekeepers.</p>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <span>Call / Text</span>
+                <a href="tel:15043458049">(504) 345-8049</a>
+            </div>
+            <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:ryan@range.it.com">ryan@range.it.com</a>
+            </div>
         </div>
-        <div class="contact-item">
-            <span>Email</span>
-            <a href="mailto:ryan@range.it.com">ryan@range.it.com</a>
-        </div>
-    </div>
-</section>
+    </section>
+</main>
 
-<footer><div class="container">&copy; 2026 Ryan Range</div></footer>
+<footer><div class="container">&copy; 2025 Ryan Range</div></footer>
 
 </body>
 </html>
