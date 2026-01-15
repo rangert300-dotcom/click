@@ -5,246 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYAN RANGE | SYSTEMS AUTHORITY</title>
     <meta name="description" content="Identity, automation, and workplace systems. AI consulting for Legal & Maritime. New Orleans.">
+    <link rel="canonical" href="https://ryanrange.click/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ryan Range",
+      "jobTitle": "IT Infrastructure Engineer & AI Consultant",
+      "url": "https://ryanrange.click",
+      "sameAs": [ "https://www.linkedin.com/in/ryanrange" ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Orleans",
+        "addressRegion": "LA",
+        "addressCountry": "US"
+      },
+      "description": "Systems authority specializing in Entra ID, Intune, and AI implementation for Legal and Maritime sectors."
+    }
+    </script>
+
     <style>
         :root {
-            /* The Final Palette: Void & Bone */
+            /* Palette: Void & Bone */
             --bg: #050505;
             --bg-alt: #0a0a0a;
-            
-            --text: #fdfbf7;     /* Bone White */
-            --muted: #888888;    /* Concrete Grey */
-            --accent: #d4d4d8;   /* Steel */
-            
+            --text: #fdfbf7;
+            --muted: #888888;
+            --accent: #d4d4d8;
             --border: rgba(253, 251, 247, 0.1);
             --grid: rgba(253, 251, 247, 0.03);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; font-size: 16px; }
-
         body {
             font-family: 'Space Grotesk', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
-            /* subtle engineering grid */
-            background-image:
-                linear-gradient(var(--grid) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
             background-size: 50px 50px;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 400;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: 1px solid var(--border);
-            transition: border-color 0.2s;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+        h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; }
+        a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.2s; }
         a:hover { border-bottom-color: var(--text); }
-
-        .label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
-            color: var(--muted);
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        /* Hero */
-        header {
-            padding: 8rem 0 5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-title {
-            font-size: clamp(3.5rem, 10vw, 6rem);
-            margin-bottom: 2rem;
-            color: var(--text);
-        }
-
-        .hero-statement {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-family: 'DM Serif Display', serif;
-            line-height: 1.35;
-            margin-bottom: 1.5rem;
-            max-width: 750px;
-        }
-
-        .hero-sub {
-            color: var(--muted);
-            max-width: 600px;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.6rem 1.2rem;
-            border: 1px solid var(--border);
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text);
-        }
-
-        .status-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #4ade80; /* Green signal */
-            border-radius: 50%;
-            margin-right: 12px;
-            box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
-        }
-
-        /* Services Grid */
-        .services {
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .services-header {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0;
-            border-top: 1px solid var(--border);
-        }
-
-        @media(min-width: 700px) {
-            .services-grid { grid-template-columns: 1fr 1fr; }
-            .service-item:nth-child(odd) { border-right: 1px solid var(--border); }
-        }
-
-        .service-item {
-            padding: 3rem 2rem;
-            border-bottom: 1px solid var(--border);
-        }
+        .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--muted); margin-bottom: 1.5rem; display: block; }
         
-        /* Remove extra padding on mobile to keep it tight */
-        @media(max-width: 700px) {
-            .service-item { padding: 2rem 0; }
-        }
+        /* Hero */
+        header { padding: 8rem 0 5rem; border-bottom: 1px solid var(--border); }
+        .hero-title { font-size: clamp(3.5rem, 10vw, 6rem); margin-bottom: 2rem; color: var(--text); }
+        .hero-statement { font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: 'DM Serif Display', serif; line-height: 1.35; margin-bottom: 1.5rem; max-width: 750px; }
+        .hero-sub { color: var(--muted); max-width: 600px; margin-bottom: 2rem; font-size: 1rem; }
+        .status-badge { display: inline-flex; align-items: center; padding: 0.6rem 1.2rem; border: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+        .status-dot { width: 6px; height: 6px; background-color: #4ade80; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(74, 222, 128, 0.4); }
 
-        .service-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text);
-        }
+        /* Services */
+        .services { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+        .services-header { font-size: 1.5rem; margin-bottom: 3rem; }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--border); }
+        .service-item { padding: 3rem 2rem; border-bottom: 1px solid var(--border); }
+        .service-title { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text); }
+        .service-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+        
+        @media(max-width: 699px) { .service-item { padding: 2rem 0; } .service-item:last-child { border-bottom: none; } }
+        @media(min-width: 700px) { .services-grid { grid-template-columns: 1fr 1fr; } .service-item:nth-child(odd) { border-right: 1px solid var(--border); } }
 
-        .service-desc {
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Workshop Banner */
-        .workshop {
-            background: var(--bg-alt);
-            border-bottom: 1px solid var(--border);
-            padding: 5rem 0;
-        }
-
-        .workshop-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        @media(min-width: 768px) {
-            .workshop-grid {
-                grid-template-columns: 2fr 1fr;
-                align-items: center;
-            }
-        }
-
-        .workshop-tagline {
-            font-family: 'DM Serif Display', serif;
-            font-style: italic;
-            margin: 0.5rem 0 1rem;
-            font-size: 1.1rem;
-            color: var(--text);
-        }
-
-        .btn {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 1.2rem;
-            background: var(--text);
-            color: var(--bg);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-size: 0.8rem;
-            border: none;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
+        /* Workshop */
+        .workshop { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 5rem 0; }
+        .workshop-grid { display: grid; gap: 2rem; }
+        @media(min-width: 768px) { .workshop-grid { grid-template-columns: 2fr 1fr; align-items: center; } }
+        .workshop-tagline { font-family: 'DM Serif Display', serif; font-style: italic; margin: 0.5rem 0 1rem; font-size: 1.1rem; color: var(--text); }
+        .btn { display: inline-flex; justify-content: center; align-items: center; width: 100%; padding: 1.2rem; background: var(--text); color: var(--bg); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.8rem; border: none; cursor: pointer; transition: opacity 0.2s; }
         .btn:hover { opacity: 0.9; border-bottom: none; }
 
         /* Contact */
         .contact { padding: 6rem 0; }
-        
         .contact-header { font-size: 2rem; margin-bottom: 0.5rem; }
         .contact-sub { color: var(--muted); margin-bottom: 3rem; }
+        .contact-methods { display: flex; flex-wrap: wrap; gap: 3rem; }
+        .contact-item span { display: block; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem; }
+        .contact-item a { font-size: 1.3rem; font-family: 'DM Serif Display', serif; color: var(--text); }
         
-        .contact-methods {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-        }
-
-        .contact-item span {
-            display: block;
-            font-size: 0.7rem;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item a {
-            font-size: 1.3rem;
-            font-family: 'DM Serif Display', serif;
-            color: var(--text);
-        }
-
-        footer {
-            padding: 4rem 0;
-            font-size: 0.75rem;
-            color: var(--muted);
-            border-top: 1px solid var(--border);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-        }
+        footer { padding: 4rem 0; font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); text-align: center; text-transform: uppercase; letter-spacing: 0.2em; }
     </style>
 </head>
 <body>
@@ -252,56 +100,32 @@
 <header>
     <div class="container">
         <span class="label">New Orleans • LA</span>
-
         <h1 class="hero-title">Ryan Range</h1>
-
-        <p class="hero-statement">
-            I make systems work — and teams actually use them.
-        </p>
-
-        <p class="hero-sub">
-            I've kept infrastructure running where downtime costs six figures.
-            Now I do the same for legal and maritime.
-        </p>
-
-        <div class="status-badge">
-            <span class="status-dot"></span>
-            Capacity: Open
-        </div>
+        <p class="hero-statement">I make systems work — and teams actually use them.</p>
+        <p class="hero-sub">I've kept infrastructure running where downtime costs six figures. Now I do the same for legal and maritime.</p>
+        <div class="status-badge"><span class="status-dot"></span>Capacity: Open</div>
     </div>
 </header>
 
 <section class="services">
     <div class="container">
         <h2 class="services-header">What I Run</h2>
-
         <div class="services-grid">
             <div class="service-item">
                 <h3 class="service-title">Identity & Access</h3>
-                <p class="service-desc">
-                    Entra ID, Intune, zero-trust. Security that holds tight without making your employees hate their jobs.
-                </p>
+                <p class="service-desc">Entra ID, Intune, zero-trust. Security that holds tight without making your employees hate their jobs.</p>
             </div>
-
             <div class="service-item">
                 <h3 class="service-title">AI Integration</h3>
-                <p class="service-desc">
-                    Production AI workflows. No demos. No decks. Ownership end-to-end. I build tools you can use Monday morning.
-                </p>
+                <p class="service-desc">Production AI workflows. No demos. No decks. Ownership end-to-end. I build tools you can use Monday morning.</p>
             </div>
-
             <div class="service-item">
                 <h3 class="service-title">Infrastructure</h3>
-                <p class="service-desc">
-                    Built to fail gracefully. Monitored. Documented. Handed off clean.
-                </p>
+                <p class="service-desc">Built to fail gracefully. Monitored. Documented. Handed off clean. No black boxes.</p>
             </div>
-
             <div class="service-item">
                 <h3 class="service-title">The Bridge</h3>
-                <p class="service-desc">
-                    I translate between "Technical" and "Business." No fog. No jargon. Decisions get made.
-                </p>
+                <p class="service-desc">I translate between "Technical" and "Business." No fog. No jargon. Decisions get made.</p>
             </div>
         </div>
     </div>
@@ -311,12 +135,10 @@
     <div class="container">
         <div class="workshop-grid">
             <div>
-                <span class="label">Jan 6, 2026</span>
+                <span class="label">Q1 2026</span>
                 <h2>AI Crash Course</h2>
                 <p class="workshop-tagline">"AI won't replace you. Someone using AI will."</p>
-                <p class="hero-sub" style="margin-bottom: 0;">
-                    90 minutes. Non-technical. I will show you how to use current AI tools to do your actual job faster.
-                </p>
+                <p class="hero-sub" style="margin-bottom: 0;">90 minutes. Non-technical. I will show you how to use current AI tools to do your actual job faster.</p>
             </div>
             <div>
                 <a href="mailto:ryan@range.it.com?subject=AI%20Course%20Seat" class="btn" style="border-bottom:none">Secure Seat</a>
@@ -328,7 +150,6 @@
 <section class="contact container">
     <h2 class="contact-header">Direct Line.</h2>
     <p class="contact-sub">No gatekeepers.</p>
-    
     <div class="contact-methods">
         <div class="contact-item">
             <span>Call / Text</span>
@@ -341,11 +162,7 @@
     </div>
 </section>
 
-<footer>
-    <div class="container">
-        &copy; 2026 Ryan Range
-    </div>
-</footer>
+<footer><div class="container">&copy; 2026 Ryan Range</div></footer>
 
 </body>
 </html>
