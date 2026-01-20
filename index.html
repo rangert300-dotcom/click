@@ -233,5 +233,30 @@
 
 <footer><div class="container">&copy; 2025 Ryan Range</div></footer>
 
+<style>
+  .resume-float {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb; /* Your accent blue */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    z-index: 9999;
+    font-size: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+  }
+  .resume-float:active {
+    transform: translateX(-50%) scale(0.95);
+  }
+</style>
+<a href="https://resume.ryanrange.click" class="resume-float">📄 View Resume</a>
+
 </body>
 </html>
