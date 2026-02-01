@@ -50,7 +50,7 @@
             /* Palette: Void & Bone */
             --bg: #050505;
             --bg-alt: #0a0a0a;
-            --text: #fdfbf7;
+            --text: #e0e0e0;
             --muted: #888888;
             --accent: #d4d4d8;
             --border: rgba(253, 251, 247, 0.1);
@@ -94,6 +94,138 @@
         .hero-title { font-size: clamp(3.5rem, 10vw, 6rem); margin-bottom: 2rem; color: var(--text); }
         .hero-statement { font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: 'DM Serif Display', serif; line-height: 1.35; margin-bottom: 1.5rem; max-width: 750px; }
         .hero-sub { color: var(--muted); max-width: 600px; margin-bottom: 2rem; font-size: 1rem; }
+
+        /* Vortex Loader */
+        #vortex-loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 10000;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            animation: vortex-fade 1.2s forwards;
+            will-change: transform, opacity;
+        }
+        #vortex-loader::before {
+            content: "";
+            width: min(40vmin, 420px);
+            height: min(40vmin, 420px);
+            border-radius: 50%;
+            background:
+                conic-gradient(from 0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.8) 55%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.9));
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.25), 0 0 60px rgba(255, 255, 255, 0.12);
+            animation: vortex-spin 0.8s linear infinite, vortex-pulse 0.8s ease-in-out infinite;
+            will-change: transform, opacity;
+        }
+        #vortex-loader::after {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background:
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.2) 18%, rgba(255, 255, 255, 0) 36%),
+                radial-gradient(circle at center, transparent 48%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 62%),
+                repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.04) 0px, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 3px);
+            animation: vortex-shockwave 0.8s ease-out 1, vortex-flicker 0.2s steps(2) infinite;
+            opacity: 0.9;
+            will-change: transform, opacity;
+        }
+
+        @keyframes vortex-spin {
+            to { transform: rotate(720deg); }
+        }
+        @keyframes vortex-pulse {
+            0% { transform: scale(0.92); opacity: 0.8; }
+            40% { transform: scale(1.06); opacity: 1; }
+            70% { transform: scale(0.98); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 0.95; }
+        }
+        @keyframes vortex-shockwave {
+            0% { transform: scale(0.2); opacity: 0.95; }
+            60% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+        @keyframes vortex-flicker {
+            0% { opacity: 0.6; }
+            100% { opacity: 0.95; }
+        }
+        @keyframes vortex-fade {
+            0% { opacity: 1; transform: scale(1); }
+            65% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+
+        /* Gateway */
+        #gateway {
+            min-height: 100vh;
+            display: flex;
+            background: #050505;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .gateway-link {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+            border-bottom: none;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .gateway-link::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .gateway-link.telly::before {
+            background: linear-gradient(120deg, rgba(255, 180, 120, 0.08), transparent 60%);
+        }
+        .gateway-link.range::before {
+            background: linear-gradient(240deg, rgba(120, 180, 255, 0.08), transparent 60%);
+        }
+        .gateway-inner {
+            display: grid;
+            gap: 0.6rem;
+            place-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        .gateway-inner img {
+            max-width: min(38vmin, 260px);
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gateway-range {
+            font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            letter-spacing: 0.04em;
+            text-transform: none;
+            color: var(--text);
+        }
+        .gateway-label {
+            font-size: 0.6rem;
+            color: var(--muted);
+        }
+        .gateway-chevron {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: var(--muted);
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        @media (max-width: 767px) {
+            #gateway { flex-direction: column; }
+            .gateway-link { min-height: 50vh; }
+        }
         
         .status-badge { display: inline-flex; align-items: center; padding: 0.6rem 1.2rem; border: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
         
@@ -148,7 +280,25 @@
 </head>
 <body>
 
+<div id="vortex-loader" aria-hidden="true"></div>
+
 <main>
+    <section id="gateway">
+        <a class="gateway-link telly" href="https://tellytechservices.com">
+            <div class="gateway-inner">
+                <img src="assets/assets/telly-logo.png" alt="Telly Tech Services">
+                <span class="gateway-label">tellytechservices.com</span>
+            </div>
+        </a>
+        <a class="gateway-link range" href="https://range.it.com">
+            <div class="gateway-inner">
+                <div class="gateway-range">range.it.com</div>
+                <span class="gateway-label">RANGE IT</span>
+            </div>
+        </a>
+        <div class="gateway-chevron" aria-hidden="true">⌄</div>
+    </section>
+
     <header>
         <div class="container">
             <span class="label">New Orleans • LA</span>
@@ -233,30 +383,16 @@
 
 <footer><div class="container">&copy; 2025 Ryan Range</div></footer>
 
-<style>
-  .resume-float {
-    position: fixed;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #2563eb; /* Your accent blue */
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-family: -apple-system, system-ui, sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-    z-index: 9999;
-    font-size: 16px;
-    border: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
-  }
-  .resume-float:active {
-    transform: translateX(-50%) scale(0.95);
-  }
-</style>
-<a href="https://resume.ryanrange.click" class="resume-float">📄 View Resume</a>
+<script>
+    const loader = document.getElementById('vortex-loader');
+    if (loader) {
+        loader.addEventListener('animationend', () => {
+            if (loader && loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+            }
+        }, { once: true });
+    }
+</script>
 
 </body>
 </html>
