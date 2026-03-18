@@ -1,0 +1,11 @@
+# Vanity routes — managed in Cloudflare dashboard, documented here for reference
+# These redirects are configured as Cloudflare redirect rules, NOT served by this repo.
+# Do NOT create HTML files at these paths — they're handled at the Cloudflare level.
+#
+# /consult     → iCal link (fractional CTO meeting)
+# /discover    → iCal link (discovery pre-route)
+# /meet        → iCal link (intro 30 min)
+# /ai          → Eventbrite (Ryan will update the link)
+# /linkedin    → LinkedIn profile redirect
+#
+# Resume lives at: resume.ryanrange.click (subdomain, separate deployment)
