@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="100%" style="stop-color:#141419"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid overlay -->
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(240,237,230,0.025)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Accent line -->
+  <rect x="80" y="200" width="60" height="3" fill="#3b82f6" rx="1"/>
+
+  <!-- Name -->
+  <text x="80" y="280" font-family="Georgia, serif" font-size="72" fill="#f0ede6" letter-spacing="-2">Ryan Range</text>
+
+  <!-- Tagline -->
+  <text x="80" y="340" font-family="system-ui, sans-serif" font-size="24" fill="#6b6b76">Infrastructure, AI &amp; Technical Strategy</text>
+
+  <!-- Location -->
+  <text x="80" y="390" font-family="system-ui, sans-serif" font-size="18" fill="#4a4a55" letter-spacing="3" text-transform="uppercase">NEW ORLEANS, LA</text>
+
+  <!-- URL -->
+  <text x="80" y="550" font-family="system-ui, sans-serif" font-size="18" fill="#3b82f6">ryanrange.click</text>
+
+  <!-- Status dot -->
+  <circle cx="80" cy="458" r="5" fill="#4ade80"/>
+  <text x="96" y="463" font-family="system-ui, sans-serif" font-size="14" fill="#6b6b76" letter-spacing="2">CAPACITY: OPEN</text>
+</svg>

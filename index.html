@@ -23,9 +23,7 @@
     <meta name="twitter:image" content="https://ryanrange.click/assets/img/og-image.png">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fonts.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -34,29 +32,50 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ryan Range",
-      "jobTitle": "IT Infrastructure Engineer & AI Consultant",
-      "url": "https://ryanrange.click",
-      "image": "https://ryanrange.click/assets/img/og-image.png",
-      "telephone": "+15043458049",
-      "email": "ryan@range.it.com",
-      "sameAs": [
-        "https://ryanrange.click/linkedin",
-        "https://www.youtube.com/@ryantrange"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "New Orleans",
-        "addressRegion": "LA",
-        "addressCountry": "US"
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Dillard University"
-      },
-      "description": "10+ years in IT infrastructure and systems administration. Fractional CTO, AI integration, identity & access management, and web builds for businesses and nonprofits in New Orleans.",
-      "knowsAbout": ["IT Infrastructure", "Microsoft 365", "Artificial Intelligence", "Entra ID", "Intune", "Azure", "Maritime Systems", "Legal Tech", "Web Development"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Ryan Range",
+          "jobTitle": "IT Infrastructure Engineer & AI Consultant",
+          "url": "https://ryanrange.click",
+          "image": "https://ryanrange.click/assets/img/og-image.png",
+          "telephone": "+15043458049",
+          "email": "ryan@range.it.com",
+          "sameAs": [
+            "https://ryanrange.click/linkedin",
+            "https://www.youtube.com/@ryantrange"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Orleans",
+            "addressRegion": "LA",
+            "addressCountry": "US"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Dillard University"
+          },
+          "description": "10+ years in IT infrastructure and systems administration. Fractional CTO, AI integration, identity & access management, and web builds for businesses and nonprofits in New Orleans.",
+          "knowsAbout": ["IT Infrastructure", "Microsoft 365", "Artificial Intelligence", "Entra ID", "Intune", "Azure", "Maritime Systems", "Legal Tech", "Web Development"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "name": "Ryan Range — Technical Strategy",
+          "url": "https://ryanrange.click",
+          "telephone": "+15043458049",
+          "email": "ryan@range.it.com",
+          "areaServed": {
+            "@type": "City",
+            "name": "New Orleans",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Louisiana"
+            }
+          },
+          "serviceType": ["Fractional CTO", "AI Integration", "IT Infrastructure", "Identity & Access Management", "Web Development"],
+          "priceRange": "$$$"
+        }
+      ]
     }
     </script>
 </head>
@@ -105,6 +124,12 @@
 
                 <p class="hero__sub">I've kept infrastructure running where downtime costs six figures. Now I bring that same rigor to businesses, nonprofits, and enterprises that need systems they can actually rely on.</p>
 
+                <!-- Contact info visible without scrolling -->
+                <div class="hero__contact">
+                    <a href="mailto:ryan@range.it.com" class="hero__contact-item">ryan@range.it.com</a>
+                    <a href="tel:15043458049" class="hero__contact-item">(504) 345-8049</a>
+                </div>
+
                 <div class="hero__actions">
                     <a href="contact.html" class="btn btn--primary">Book a Call</a>
                     <div class="status-badge">
@@ -115,74 +140,18 @@
             </div>
         </section>
 
-        <!-- Services Overview -->
+        <!-- The Junction — Brand Ecosystem -->
         <section class="section section--border">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="label section-header__label">What I Do</span>
-                    <h2 class="section-header__title">Four Pillars</h2>
-                    <p class="section-header__desc">Every engagement starts with one of these. Most touch all four.</p>
-                </div>
-
-                <div class="services-grid">
-                    <a href="services.html#identity" class="card reveal reveal--delay-1">
-                        <span class="label card__label">01</span>
-                        <h3 class="card__title">Identity & Access</h3>
-                        <p class="card__desc">Microsoft Entra ID, Intune, Autopilot, Zero-Trust. Security that holds tight without making your team hate their jobs.</p>
-                        <div class="card__tags">
-                            <span class="tag">Entra ID</span>
-                            <span class="tag">Intune</span>
-                            <span class="tag">Zero-Trust</span>
-                        </div>
-                    </a>
-                    <a href="services.html#ai" class="card reveal reveal--delay-2">
-                        <span class="label card__label">02</span>
-                        <h3 class="card__title">AI Integration</h3>
-                        <p class="card__desc">LLM operations, workflow automation, production AI tools. No demos, no decks — tools you can use Monday morning.</p>
-                        <div class="card__tags">
-                            <span class="tag">LLM Ops</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Copilot</span>
-                        </div>
-                    </a>
-                    <a href="services.html#infrastructure" class="card reveal reveal--delay-3">
-                        <span class="label card__label">03</span>
-                        <h3 class="card__title">Infrastructure</h3>
-                        <p class="card__desc">Built to fail gracefully. Monitored. Documented. Handed off clean. No black boxes, no single points of failure.</p>
-                        <div class="card__tags">
-                            <span class="tag">Azure</span>
-                            <span class="tag">M365</span>
-                            <span class="tag">VMware</span>
-                        </div>
-                    </a>
-                    <a href="services.html#bridge" class="card reveal reveal--delay-4">
-                        <span class="label card__label">04</span>
-                        <h3 class="card__title">The Bridge</h3>
-                        <p class="card__desc">I translate between "Technical" and "Business." No fog, no jargon. Decisions get made, and everyone leaves the room aligned.</p>
-                        <div class="card__tags">
-                            <span class="tag">Strategy</span>
-                            <span class="tag">Training</span>
-                            <span class="tag">Documentation</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Brand Ecosystem -->
-        <section class="section section--surface section--border">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="label section-header__label">My Practices</span>
-                    <h2 class="section-header__title">What I Run</h2>
-                    <p class="section-header__desc">I serve homeowners at $75 and enterprises at retainer — same person, same standards. The breadth is the point.</p>
+                    <p class="section-header__desc" style="font-size: var(--text-lg); max-width: 700px;">I help homeowners with their Wi-Fi and enterprises with their infrastructure. Same diagnostic rigor, different invoices.</p>
                 </div>
 
                 <div class="brands">
                     <div class="brand-card reveal reveal--delay-1">
                         <p class="brand-card__type">Commercial / Enterprise</p>
                         <h3 class="brand-card__name">Range IT</h3>
-                        <p class="brand-card__desc">Fractional CTO services, AI integration, identity & access management, and website builds for businesses. Enterprise-grade infrastructure for organizations that need it to work and need someone who can explain why.</p>
+                        <p class="brand-card__desc">Fractional CTO services, AI integration, identity & access management, and website builds for businesses. Enterprise engagements start at $249/hr for consulting, $3,000/mo for fractional CTO.</p>
                         <a href="https://range.it.com" class="brand-card__link" target="_blank" rel="noopener">Visit range.it.com →</a>
                     </div>
                     <div class="brand-card reveal reveal--delay-2">
@@ -196,7 +165,7 @@
         </section>
 
         <!-- Social Proof -->
-        <section class="section section--border">
+        <section class="section section--surface section--border">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="label section-header__label">Trust Signals</span>
@@ -221,20 +190,56 @@
                         <p class="testimonial__role">Executive Director, Nonprofit</p>
                     </div>
                 </div>
+
+                <div class="text-center mt-xl reveal">
+                    <a href="work.html" class="btn btn--outline">See the work →</a>
+                </div>
             </div>
         </section>
 
-        <!-- 90-Minute Overhaul Teaser -->
+        <!-- What Else I'm Into -->
+        <section class="section section--border">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label section-header__label">The Hub</span>
+                    <h2 class="section-header__title">What Else I'm Into</h2>
+                </div>
+
+                <div class="hub-grid">
+                    <a href="ai.html" class="hub-card reveal reveal--delay-1">
+                        <span class="hub-card__type">I teach this</span>
+                        <h3 class="hub-card__title">AI Crash Course</h3>
+                        <p class="hub-card__desc">90 minutes. Non-technical. I show you how to use current AI tools to do your actual job faster.</p>
+                    </a>
+                    <a href="services.html#overhaul" class="hub-card reveal reveal--delay-2">
+                        <span class="hub-card__type">I also build websites</span>
+                        <h3 class="hub-card__title">90-Minute Vibe Coded Overhaul</h3>
+                        <p class="hub-card__desc">Your business gets a production-ready website, built live while you watch, deployed before you hang up.</p>
+                    </a>
+                    <a href="https://ryanrange.click/linkedin" class="hub-card reveal reveal--delay-3" target="_blank" rel="noopener">
+                        <span class="hub-card__type">Connect</span>
+                        <h3 class="hub-card__title">LinkedIn</h3>
+                        <p class="hub-card__desc">Where I post about infrastructure, AI tools, and the business of technology.</p>
+                    </a>
+                    <a href="https://github.com/rangert300" class="hub-card reveal reveal--delay-4" target="_blank" rel="noopener">
+                        <span class="hub-card__type">Code</span>
+                        <h3 class="hub-card__title">GitHub</h3>
+                        <p class="hub-card__desc">Open source, side projects, and the repos behind client builds.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Latest -->
         <section class="section section--surface section--border">
             <div class="container">
-                <div class="cta-block reveal">
-                    <span class="label">New Offering</span>
-                    <h2 class="cta-block__title mt-md">90-Minute Vibe Coded Website Overhaul</h2>
-                    <p class="cta-block__desc">Your business gets a production-ready website, built live, deployed before you hang up. This page was built using the same process.</p>
-                    <div class="cta-block__actions">
-                        <a href="services.html#overhaul" class="btn btn--primary">See How It Works</a>
-                        <a href="contact.html" class="btn btn--outline">Book Your Overhaul</a>
-                    </div>
+                <div class="section-header reveal">
+                    <span class="label section-header__label">Writing</span>
+                    <h2 class="section-header__title">Latest</h2>
+                </div>
+
+                <div class="blog-empty reveal">
+                    <p class="blog-empty__desc">Writing is coming. I'm working on articles about infrastructure strategy, AI for non-technical teams, and war stories from a decade of keeping systems running. <a href="blog/" style="color: var(--accent);">Check back soon</a> or <a href="contact.html" style="color: var(--accent);">book a call</a> to talk directly.</p>
                 </div>
             </div>
         </section>
@@ -244,11 +249,12 @@
             <div class="container">
                 <div class="cta-block reveal">
                     <h2 class="cta-block__title">Let's Talk</h2>
-                    <p class="cta-block__desc">Whether you need a fractional CTO, an AI integration, or a website built before lunch — I'm one call away.</p>
+                    <p class="cta-block__desc">Whether you need a fractional CTO, an AI integration, or a website built before lunch — I'm one call away. No gatekeepers.</p>
                     <div class="cta-block__actions">
                         <a href="contact.html" class="btn btn--primary btn--large">Book a Call</a>
                         <a href="tel:15043458049" class="btn btn--outline btn--large">(504) 345-8049</a>
                     </div>
+                    <p class="mt-md" style="font-size: var(--text-sm); color: var(--text-muted);">ryan@range.it.com</p>
                 </div>
             </div>
         </section>
@@ -279,6 +285,8 @@
                         <li><a href="contact.html">Book a Call</a></li>
                         <li><a href="mailto:ryan@range.it.com">Email</a></li>
                         <li><a href="tel:15043458049">(504) 345-8049</a></li>
+                        <li><a href="https://ryanrange.click/linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/rangert300" target="_blank" rel="noopener">GitHub</a></li>
                     </ul>
                 </div>
                 <div>
